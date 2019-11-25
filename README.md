@@ -1,7 +1,7 @@
 # dino
  A minimal dino game for bash.
 
- ## yay, a quick demo
+## yay, a quick demo
 
 ![](/images/dino.gif)
 
