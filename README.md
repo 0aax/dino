@@ -1,5 +1,5 @@
 # dino
- A minimal dino game for bash.
+ A minimal dino game.
 
 ## yay, a quick demo
 
