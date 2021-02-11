@@ -44,7 +44,6 @@ int main() {
 
 void Dino::loop() {
     char input;
-    string scoreString;
     initGround(20, 0, winX);
     while(true){
         input = getch();
