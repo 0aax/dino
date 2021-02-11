@@ -20,7 +20,7 @@ class Dino {
         Position dinoPosJump;
         Position dinoPos;
 
-        int changeThisLater;
+        int feetPos;
         int velocity;
 
         bool isjumping;

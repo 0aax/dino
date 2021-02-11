@@ -12,7 +12,7 @@ Dino::Dino() {
 
     isRunning = false;
     dinoCanJump = 0;
-    changeThisLater = 1;
+    feetPos = 1;
     velocity = 5;
 
     jumpPause = 0;
@@ -119,14 +119,14 @@ void Dino::dinoRunning(Position pos, int v){
     if(runPause <= 0){
         mvprintw(pos.getY()+7, pos.getX()+3, "        ");
         mvprintw(pos.getY()+8, pos.getX()+3, "         ");  
-        if (changeThisLater == 1) {
+        if (feetPos == 1) {
             mvprintw(pos.getY()+7, pos.getX()+2, " █    █▄ ");
             mvprintw(pos.getY()+8, pos.getX()+2, " ▀▀");         
         } else {
             mvprintw(pos.getY()+7, pos.getX()+2, " █▄   █");
             mvprintw(pos.getY()+8, pos.getX()+7, " ▀▀");
         }
-        changeThisLater *= -1;
+        feetPos *= -1;
         refresh();
         dinoPos = dinoPosRun;
         runPause = 50000;
@@ -216,7 +216,7 @@ bool valueInRange(int value, int min, int max)
 { return (value >= min) && (value <= max); }
 
 bool Dino::checkCollision(Position dino, Position cacti) {
-    bool xOverlap = valueInRange(dino.getX(), cacti.getX()-5, cacti.getX()-5) ||
+    bool xOverlap = valueInRange(dino.getX(), cacti.getX()-5, cacti.getX()) ||
                     valueInRange(cacti.getX()-5, dino.getX(), dino.getX() + 13);
 
     bool yOverlap = valueInRange(dino.getY()-1, cacti.getY(), cacti.getY() + 2) ||
