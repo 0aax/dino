@@ -1,5 +1,5 @@
 # dino
- A minimal dino game.
+ A dino game.
 
 ## yay, a quick demo
 
